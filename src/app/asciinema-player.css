@@ -22,7 +22,7 @@ div.ap-wrapper .title-bar {
   padding: 15px;
   font-family: sans-serif;
   color: white;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #a90000;
 }
 
 div.ap-wrapper .title-bar img {
@@ -41,7 +41,7 @@ div.ap-wrapper .title-bar a:hover {
 }
 
 div.ap-wrapper:fullscreen {
-  background-color: #000;
+  background-color: #a90000;
   width: 100%;
   align-items: center;
 }
@@ -69,7 +69,7 @@ div.ap-wrapper div.ap-player {
 
 .ap-player {
   --term-color-foreground: #ffffff;
-  --term-color-background: #000000;
+  --term-color-background: #a90000;
   --term-color-0: var(--term-color-foreground);
   --term-color-1: var(--term-color-foreground);
   --term-color-2: var(--term-color-foreground);
@@ -502,7 +502,7 @@ span.ap-marker-container:hover span.ap-marker {
 }
 
 .ap-player .ap-overlay-info {
-  background-color: var(--term-color-background);
+  background-color: #a90000;
 }
 
 .ap-player .ap-overlay-info span {

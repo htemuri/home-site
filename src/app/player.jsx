@@ -7,8 +7,9 @@ export default function TerminalPlayer() {
     AsciinemaPlayer.create("/demo.cast", document.getElementById("player"), {
       controls: false,
       autoPlay: true,
-      fit: "both",
-      rows: 34,
+      fit: "height",
+      cols: 100,
+      rows: 39,
     });
   }, []);
   return <div id="player" className="h-full w-full"></div>;
