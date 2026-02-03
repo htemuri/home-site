@@ -7,13 +7,14 @@ import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/h
 import { CodeBlock } from "@/components/animate-ui/primitives/animate/code-block";
 import React from "react";
 import { GravityStarsBackground } from "@/components/animate-ui/components/backgrounds/gravity-stars";
+import GithubIcon from "./github-icon";
 
 export default function Home() {
   const scrollContainerRef = React.useRef<HTMLDivElement | null>(null);
 
   return (
     <>
-      <GravityStarsBackground className="absolute inset-0 flex items-center justify-center rounded-xl bg-[#0d1017] z-2" />
+      <GravityStarsBackground className="absolute inset-0 flex items-center justify-center rounded-xl bg-[#0d1017] z-2" starsCount={80} />
       <div className="flex h-screen max-h-screen w-screen justify-center items-center absolute top-0 left-0">
         <main className="h-screen max-h-screen w-screen max-w-7xl flex items-center justify-center py-8 px-16">
           <div className="grid grid-cols-10 max-h-3/4 w-full gap-4   ">
@@ -56,12 +57,11 @@ export default function Home() {
                 {/* <Button asChild variant={"ghost"}> */}
                 <Link href={"https://github.com/htemuri"} target="_blank">
                   {/* <GithubIcon width={25} /> */}
-                  <Image src={"/github.svg"} alt="github icon" className="p-0 m-0" width={20} height={20} />
+                  <GithubIcon className="p-0 m-0 w-5" />
                 </Link>
                 {/* </Button> */}
               </div>
-              <div ref={scrollContainerRef} className="hover:border-teal-300 h-150 max-h-fit row-span-9 z-3 bg-[#0d1017] border overflow-y-auto border-gray-500 grow w-full">
-                {/* <TerminalPlayer /> */}
+              <div ref={scrollContainerRef} className="hover:border-teal-300 h-200 max-h-fit row-span-9 z-3 bg-[#0d1017] border overflow-y-auto border-gray-500 grow w-full">
                 <CodeBlock className="ml-2 mt-1" code={`[2mStarting session…[0m
 [1;32mConnected.[0m
 
@@ -113,7 +113,7 @@ export default function Home() {
 where I document what I've learned[0m.[0m
 
 `}
-                  lang="ansi" duration={10000} writing={true} scrollContainerRef={scrollContainerRef} />
+                  lang="ansi" duration={1000} writing={true} scrollContainerRef={scrollContainerRef} />
               </div>
             </div>
           </div>
