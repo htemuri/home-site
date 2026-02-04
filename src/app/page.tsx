@@ -1,18 +1,14 @@
 'use client'
 
 import Link from "next/link";
-import Image from "next/image";
 import { ChevronRightIcon, LinkedinIcon, MountainSnowIcon } from "lucide-react";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { CodeBlock } from "@/components/animate-ui/primitives/animate/code-block";
 import React, { useState } from "react";
-import { GravityStarsBackground } from "@/components/animate-ui/components/backgrounds/gravity-stars";
 import GithubIcon from "./github-icon";
-import { BubbleBackground } from "@/components/animate-ui/components/backgrounds/bubble";
 
 export default function Home() {
   const scrollContainerRef = React.useRef<HTMLDivElement | null>(null);
-  const [showStars, setShowStarts] = useState(false);
   return (
     <>
       {/* <GravityStarsBackground className={`transition ease-in delay-500 duration-3000 h-screen overflow-y-clip bg-[#0d1017] z-2`} starsCount={80} /> */}
@@ -112,7 +108,7 @@ export default function Home() {
 where I document what I've learned[0m.[0m
 
 `}
-                  lang="ansi" duration={1000} writing={true} scrollContainerRef={scrollContainerRef} onDone={() => setShowStarts(true)} />
+                  lang="ansi" duration={1000} writing={true} scrollContainerRef={scrollContainerRef} />
               </div>
             </div>
           </div>
