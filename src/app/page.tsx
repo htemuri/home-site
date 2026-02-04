@@ -5,17 +5,20 @@ import Image from "next/image";
 import { ChevronRightIcon, LinkedinIcon, MountainSnowIcon } from "lucide-react";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { CodeBlock } from "@/components/animate-ui/primitives/animate/code-block";
-import React from "react";
+import React, { useState } from "react";
 import { GravityStarsBackground } from "@/components/animate-ui/components/backgrounds/gravity-stars";
 import GithubIcon from "./github-icon";
+import { BubbleBackground } from "@/components/animate-ui/components/backgrounds/bubble";
 
 export default function Home() {
   const scrollContainerRef = React.useRef<HTMLDivElement | null>(null);
-
+  const [showStars, setShowStarts] = useState(false);
   return (
     <>
-      <GravityStarsBackground className="absolute inset-0 flex items-center justify-center rounded-xl bg-[#0d1017] z-2" starsCount={80} />
-      <div className="flex h-screen max-h-screen w-screen justify-center items-center absolute top-0 left-0">
+      {/* <GravityStarsBackground className={`transition ease-in delay-500 duration-3000 h-screen overflow-y-clip bg-[#0d1017] z-2`} starsCount={80} /> */}
+      <div className="bg-[#0d1017] h-screen z-2" />
+      {/* <BubbleBackground className="absolute inset-0 flex items-center justify-center rounded-xl" /> */}
+      <div className="flex h-screen max-h-screen w-screen justify-center items-center absolute top-0 left-0 overflow-clip">
         <main className="h-screen max-h-screen w-screen max-w-7xl flex items-center justify-center py-8 px-16">
           <div className="grid grid-cols-10 max-h-3/4 w-full gap-4   ">
             <div className={`col-span-2 border hover:border-rose-300 border-gray-500 px-4 py-2 bg-[#0d1017] z-3`}>
@@ -24,12 +27,8 @@ export default function Home() {
             <div className="grid grid-rows-10 flex-col col-span-8 grow gap-4">
               <div className="hover:border-orange-300 border-gray-500 row-span-1 flex border items-center pl-2 pr-4 py-2 gap-6 z-3 bg-[#0d1017]">
                 <div className="flex gap-1 items-center">
-                  {/* <Avatar>
-                  <AvatarImage src={"https://avatars.githubusercontent.com/u/51043768?v=4"} alt="@harristemuri" className="" />
-                  <AvatarFallback>HT</AvatarFallback>
-                </Avatar> */}
                   <ChevronRightIcon width={20} />
-                  <CodeBlock code={`[1;32mHarris Temuri[0m - Platform Engineerm`} lang="ansi" className="mt-0.5" writing={true} duration={2000} />
+                  <CodeBlock code={`[1;32mHarris Temuri[0m - Platform Engineer`} lang="ansi" className="mt-0.5" writing={true} duration={2000} />
                   {/* <code className="text-md cursor-default text-lime-600 dark:text-lime-300 mt-0.5">Harris Temuri - Platform Engineer</code> */}
                 </div>
                 <div className="grow" />
@@ -113,7 +112,7 @@ export default function Home() {
 where I document what I've learned[0m.[0m
 
 `}
-                  lang="ansi" duration={1000} writing={true} scrollContainerRef={scrollContainerRef} />
+                  lang="ansi" duration={1000} writing={true} scrollContainerRef={scrollContainerRef} onDone={() => setShowStarts(true)} />
               </div>
             </div>
           </div>
