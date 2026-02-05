@@ -27,10 +27,10 @@ export default function NavBar({ className, ...props }: React.ComponentProps<"di
                         </button>
                     </HoverCardTrigger>
                     <HoverCardContent className="flex w-96 flex-col gap-0.5">
-                        <Link href={"https://htemuri.github.io/0xBADC0DE/"} target="_blank" className="font-semibold text-cyan-600 dark:text-cyan-300"><code>0xBADC0DE</code></Link>
+                        {/* <Link href={"https://htemuri.github.io/0xBADC0DE/"} target="_blank" className="font-semibold text-cyan-600 dark:text-cyan-300"><code>0xBADC0DE</code></Link> */}
                         <div>Blog where I document the things I've learned.</div>
                         <div className="text-muted-foreground mt-2 text-xs">
-                            <iframe src="https://htemuri.github.io/0xBADC0DE/" loading="lazy" width="350px" height="400px" ></iframe>
+                            {/* <iframe src="https://htemuri.github.io/0xBADC0DE/"  width="350px" height="400px" ></iframe> */}
                         </div>
                     </HoverCardContent>
                 </HoverCard>

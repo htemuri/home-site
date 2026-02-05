@@ -6,8 +6,6 @@ import NavBar from "@/components/navbar";
 import SideBar from "@/components/sidebar";
 import { cn } from "@/lib/utils";
 
-
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
