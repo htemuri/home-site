@@ -1,9 +1,31 @@
+'use client';
+
 import { cn } from "@/lib/utils";
+import { Button } from "./ui/button";
+import { usePathname, useRouter } from "next/navigation";
+
+type SidebarRoute = {
+    displayName: string
+    route: string
+}
 
 export default function SideBar({ className, ...props }: React.ComponentProps<"div">) {
+    const currentRoute = usePathname()
+    const router = useRouter()
+
+    const routes: SidebarRoute[] = [
+        { displayName: "Home", route: "/" },
+        { displayName: "Projects", route: "/projects" },
+        { displayName: "Cat", route: "/cat" },
+        { displayName: "Contact Me", route: "/contact-me" }
+    ]
     return (
-        <div className={cn(`border hover:border-rose-300 border-gray-500 px-4 py-2 bg-[#0d1017]`, className)} {...props}>
-            hello
+        <div className={cn(`flex md:flex-col max-md:justify-center items-center gap-1.5 xs:gap-5 px-4 py-4 border hover:border-rose-300 border-gray-500 bg-[#0d1017]`, className)} {...props}>
+            {routes.map((route) => {
+                return <Button key={route.displayName} className="text-wrap cursor-pointer md:w-full disabled:text-gray-400" variant={"outline"} disabled={currentRoute === route.route} onClick={() => router.push(route.route)}>
+                    {route.displayName}
+                </Button>
+            })}
         </div>
     )
 }
