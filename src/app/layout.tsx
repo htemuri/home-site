@@ -52,12 +52,12 @@ export default function RootLayout({
                 <NavBar className="md:row-span-1 py-1 z-3" />
                 <div
                   className={cn(
-                    "flex flex-col md:grid row-span-9 md:grid-cols-10",
+                    "flex flex-col md:grid row-span-9 md:grid-cols-10 h-full overflow-hidden",
                     gridGap,
                   )}
                 >
                   <SideBar className="py-4 md:col-span-2 md:row-span-full z-3 overflow-hidden md:h-full" />
-                  <div className="md:col-span-8 md:row-span-full z-3 overflow-y-auto bg-[#0d1017] border border-gray-500 hover:border-teal-300">
+                  <div className="h-full md:col-span-8 md:row-span-full z-3 overflow-y-auto bg-[#0d1017] border border-gray-500 hover:border-teal-300">
                     {children}
                   </div>
                 </div>
