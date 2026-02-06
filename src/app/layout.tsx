@@ -27,8 +27,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-  const gridGap = "gap-4"
+  const gridGap = "gap-2 md:gap-4";
 
   return (
     <html lang="en" suppressHydrationWarning>
@@ -43,12 +42,22 @@ export default function RootLayout({
           {/* <GravityStarsBackground className={`h-screen overflow-y-clip bg-[#0d1017] z-2`} starsCount={80} /> */}
           <div className="bg-[#0d1017] h-screen max-h-screen overflow-hidden z-2" />
           <div className="flex h-screen max-h-screen w-screen justify-center items-center absolute top-0 left-0">
-            <main className="h-full lg:max-h-3/4 xl:max-h-7/12 w-screen max-w-7xl p-3 md:py-8 md:px-10">
-              <div className={cn("grid grid-rows-10 h-full", gridGap)}>
-                <NavBar className="row-span-1 z-3" />
-                <div className={cn("grid row-span-9 grid-rows-9 md:grid-cols-10", gridGap)}>
-                  <SideBar className="row-span-1 md:col-span-2 md:row-span-full z-3 overflow-hidden h-full" />
-                  <div className="row-span-8 md:col-span-8 md:row-span-full z-3 overflow-y-auto bg-[#0d1017] border border-gray-500 hover:border-teal-300">
+            <main className="h-full lg:max-h-3/4 xl:max-h-7/12 w-screen max-w-7xl p-1.5 md:py-8 md:px-10">
+              <div
+                className={cn(
+                  "flex flex-col md:grid md:grid-rows-10 h-full",
+                  gridGap,
+                )}
+              >
+                <NavBar className="md:row-span-1 py-1 z-3" />
+                <div
+                  className={cn(
+                    "flex flex-col md:grid row-span-9 md:grid-cols-10",
+                    gridGap,
+                  )}
+                >
+                  <SideBar className="py-4 md:col-span-2 md:row-span-full z-3 overflow-hidden md:h-full" />
+                  <div className="md:col-span-8 md:row-span-full z-3 overflow-y-auto bg-[#0d1017] border border-gray-500 hover:border-teal-300">
                     {children}
                   </div>
                 </div>
