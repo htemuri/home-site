@@ -117,7 +117,7 @@ export default function ProjectSteps({
       {/* Right Column: Details */}
       <div
         className={
-          "w-full h-full md:w-3/4 border-l border-t md:border-l-white/10 max-md:border-t-white/10 p-4 md:p-5 overflow-scroll"
+          "w-full h-full md:w-3/4 border-l border-t md:border-l-white/10 max-md:border-t-gray-500 p-4 md:p-5 overflow-scroll"
         }
       >
         <Slide asChild>
