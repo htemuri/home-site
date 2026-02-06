@@ -1,17 +1,13 @@
-'use client'
 import { ChevronRightIcon, LinkedinIcon, MountainSnowIcon } from "lucide-react";
 import { CodeBlock } from "./animate-ui/primitives/animate/code-block";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
 import Link from "next/link";
 import GithubIcon from "@/components/github-icon";
 import { cn } from "@/lib/utils";
-import { useEffect, useState } from "react";
 
 export default function NavBar({ className, ...props }: React.ComponentProps<"div">) {
-
-
     return (
-        <div className={cn("hover:border-orange-300 border-gray-500 flex border items-center px-1 md:px-4 bg-[#0d1017]", className)} {...props}>
+        <div className={cn("hover:border-orange-300 border-gray-500 flex border items-center px-1 pr-2 md:px-4 bg-[#0d1017]", className)} {...props}>
             <div className="flex gap-1 items-center overflow-hidden">
                 <ChevronRightIcon width={20} className="shrink-0" />
                 <CodeBlock code={"[1;32mHarris Temuri[0m - Platform Engineer"} lang="ansi" className="mt-0.5" writing={true} duration={2000} />
