@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import * as React from 'react';
-import { motion, type HTMLMotionProps, type Variant } from 'motion/react';
+import * as React from "react";
+import { motion, type HTMLMotionProps, type Variant } from "motion/react";
 
+import { useIsInView, type UseIsInViewOptions } from "@/hooks/use-is-in-view";
 import {
-  useIsInView,
-  type UseIsInViewOptions,
-} from '@/hooks/use-is-in-view';
-import { Slot, type WithAsChild } from '@/components/animate-ui/primitives/animate/slot';
+  Slot,
+  type WithAsChild,
+} from "@/components/animate-ui/primitives/animate/slot";
 
-type SlideDirection = 'up' | 'down' | 'left' | 'right';
+type SlideDirection = "up" | "down" | "left" | "right";
 
 type SlideProps = WithAsChild<
   {
@@ -19,17 +19,17 @@ type SlideProps = WithAsChild<
     offset?: number;
     ref?: React.Ref<HTMLElement>;
   } & UseIsInViewOptions &
-    HTMLMotionProps<'div'>
+    HTMLMotionProps<"div">
 >;
 
 function Slide({
   ref,
-  transition = { type: 'spring', stiffness: 200, damping: 20 },
+  transition = { type: "spring", stiffness: 200, damping: 20 },
   delay = 0,
   inView = false,
-  inViewMargin = '0px',
+  inViewMargin = "0px",
   inViewOnce = true,
-  direction = 'up',
+  direction = "up",
   offset = 100,
   asChild = false,
   ...props
@@ -43,9 +43,9 @@ function Slide({
     },
   );
 
-  const axis = direction === 'up' || direction === 'down' ? 'y' : 'x';
+  const axis = direction === "up" || direction === "down" ? "y" : "x";
   const hidden: Variant = {
-    [axis]: direction === 'right' || direction === 'down' ? -offset : offset,
+    [axis]: direction === "right" || direction === "down" ? -offset : offset,
   };
   const visible: Variant = { [axis]: 0 };
 
@@ -55,7 +55,7 @@ function Slide({
     <Component
       ref={localRef as React.Ref<HTMLDivElement>}
       initial="hidden"
-      animate={isInView ? 'visible' : 'hidden'}
+      animate={isInView ? "visible" : "hidden"}
       exit="hidden"
       variants={{ hidden, visible }}
       transition={{
@@ -67,7 +67,7 @@ function Slide({
   );
 }
 
-type SlideListProps = Omit<SlideProps, 'children'> & {
+type SlideListProps = Omit<SlideProps, "children"> & {
   children: React.ReactElement | React.ReactElement[];
   holdDelay?: number;
 };

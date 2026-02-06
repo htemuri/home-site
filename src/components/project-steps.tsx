@@ -56,7 +56,7 @@ export default function ProjectSteps({
   return (
     <div
       className={cn(
-        "flex flex-col md:flex-row max-md:gap-2 w-full md:items-stretch max-w-[1440px] mx-auto",
+        "flex flex-col md:flex-row max-md:gap-2 w-full md:items-stretch max-w-360 mx-auto",
         className,
       )}
     >
@@ -100,7 +100,7 @@ export default function ProjectSteps({
             {index === currentProject && (
               <motion.div
                 key={progressKey}
-                className="absolute h-[1px] bottom-0 left-0 bg-black dark:bg-white"
+                className="absolute h-px bottom-0 left-0 bg-black dark:bg-white"
                 initial={{ width: "0%" }}
                 animate={{ width: "100%" }}
                 transition={{
@@ -129,7 +129,7 @@ export default function ProjectSteps({
                   return (
                     <Badge
                       key={`${projects[currentProject].title}-card-${tech}`}
-                      variant={"outline"}
+                      variant={"secondary"}
                     >
                       {tech}
                     </Badge>

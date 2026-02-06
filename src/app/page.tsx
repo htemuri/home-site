@@ -50,11 +50,16 @@ export default function Home() {
 
 [2mIf this sounds interesting, check out my [1;37mprojects[0m or [1;37mblog 
 where I document what I've learned[0m.[0m
-`
+`;
   return (
     <div>
-      <CodeBlock className="ml-2 mt-1" code={introductionCode}
-        lang="ansi" duration={5000} writing={true} />
+      <CodeBlock
+        className="ml-2 mt-1"
+        code={introductionCode}
+        lang="ansi"
+        duration={5000}
+        writing={true}
+      />
     </div>
   );
 }
