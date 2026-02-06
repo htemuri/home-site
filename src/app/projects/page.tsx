@@ -8,12 +8,14 @@ const projects: Project[] = [
       "A cycle-accurate LC-3b microarchitecture simulator written in Go.",
     yearWorked: "2026",
     linkToBlog: "",
+    linkToRepo: "https://github.com/htemuri/lc-3b-sim",
     description: (
       <p>
         This project is a cycle-accurate LC-3b microarchitecture simulator
         implemented in Go that models the full multicycle datapath and
         microcoded control unit, including the control store, microsequencer,
-        register file, ALU, and memory system. <br />
+        register file, ALU, and memory system.
+        <br />
         <br />
         The simulator executes LC-3b machine code directly, advancing one
         microstate per clock tick with a clear separation between combinational
@@ -27,13 +29,24 @@ const projects: Project[] = [
   {
     title: "rust-ipmi",
     technologies: ["rust", "networking"],
-    shortDescription: "",
+    shortDescription:
+      "A from-scratch Rust implementation of the IPMI RMCP+ protocol, focused on low-level packet handling, authentication, and reliable communication with BMCs.",
     yearWorked: "2023",
     linkToBlog: "",
+    linkToRepo: "https://github.com/htemuri/rust-ipmi",
     description: (
       <p>
-        A stunning mountain landscape captured at sunrise. The peaks are
-        illuminated by the golden light of the morning sun.
+        This project is a from-scratch Rust implementation of the IPMI RMCP+
+        protocol, designed to communicate directly with Baseboard Management
+        Controllers (BMCs) at the packet level. It implements message
+        formatting, session establishment, authentication, and command handling
+        without relying on existing IPMI libraries, emphasizing protocol
+        correctness, safety, and clarity.
+        <br />
+        <br />
+        The project serves both as a practical tool for systems work and as a
+        deep dive into network protocols, embedded management interfaces, and
+        robust Rust systems programming.
       </p>
     ),
     image:
@@ -47,7 +60,7 @@ export default function ProjectsPage() {
       <ProjectSteps
         projects={projects}
         autoPlayInterval={15000}
-        className="max-md:hidden h-full"
+        className=" h-full overflow-y-scroll"
       />
     </div>
   );
