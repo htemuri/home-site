@@ -2,7 +2,6 @@
 
 import { CodeBlock } from "@/components/animate-ui/primitives/animate/code-block";
 import { Slide } from "@/components/animate-ui/primitives/effects/slide";
-import { cn } from "@/lib/utils";
 import { useState } from "react";
 
 export default function Home() {

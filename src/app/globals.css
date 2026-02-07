@@ -120,6 +120,7 @@
 /* Wrapping the shiki generated code for mobile experience */
 span.line {
   text-wrap: wrap;
+  opacity: 95%;
 }
 
 @layer base {

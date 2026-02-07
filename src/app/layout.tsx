@@ -40,8 +40,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <GravityStarsBackground
-            className={`h-screen overflow-y-clip bg-[#0d1017] z-2`}
-            starsCount={80}
+            className={`h-screen overflow-y-clip bg-[#090b10] z-2`}
+            starsCount={50}
           />
           {/* <div className="bg-[#0d1017] h-screen max-h-screen overflow-hidden z-2" /> */}
           <div className="flex h-screen max-h-screen w-screen justify-center items-center absolute top-0 left-0">
@@ -52,15 +52,15 @@ export default function RootLayout({
                   gridGap,
                 )}
               >
-                <NavBar className="md:row-span-1 py-1 z-3" />
+                <NavBar className="md:row-span-1 py-1 z-3 opacity-90" />
                 <div
                   className={cn(
                     "flex flex-col md:grid row-span-9 md:grid-cols-10 h-full overflow-hidden",
                     gridGap,
                   )}
                 >
-                  <SideBar className="py-4 md:col-span-2 md:row-span-full z-3 overflow-hidden md:h-full" />
-                  <div className="h-full md:col-span-8 md:row-span-full z-3 overflow-y-auto bg-[#0d1017] border border-gray-500 hover:border-teal-300">
+                  <SideBar className="py-4 md:col-span-2 md:row-span-full z-3 overflow-hidden md:h-full opacity-90" />
+                  <div className="h-full md:col-span-8 md:row-span-full z-3 overflow-y-auto bg-[#0d1017] opacity-90 border border-gray-500 hover:border-teal-300">
                     {children}
                   </div>
                 </div>
