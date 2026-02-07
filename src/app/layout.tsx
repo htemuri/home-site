@@ -39,8 +39,11 @@ export default function RootLayout({
           defaultTheme="dark"
           disableTransitionOnChange
         >
-          {/* <GravityStarsBackground className={`h-screen overflow-y-clip bg-[#0d1017] z-2`} starsCount={80} /> */}
-          <div className="bg-[#0d1017] h-screen max-h-screen overflow-hidden z-2" />
+          <GravityStarsBackground
+            className={`h-screen overflow-y-clip bg-[#0d1017] z-2`}
+            starsCount={80}
+          />
+          {/* <div className="bg-[#0d1017] h-screen max-h-screen overflow-hidden z-2" /> */}
           <div className="flex h-screen max-h-screen w-screen justify-center items-center absolute top-0 left-0">
             <main className="h-full lg:max-h-3/4 xl:max-h-7/12 w-screen max-w-7xl p-1.5 md:py-8 md:px-10">
               <div

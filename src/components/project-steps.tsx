@@ -154,7 +154,7 @@ export default function ProjectSteps({
                   router.push(projects[currentProject].linkToRepo);
                 }}
               >
-                Check out the GitHub repository
+                Check out the code on GitHub
               </Button>
               <Button
                 className="hover:cursor-pointer max-xl:w-full"
