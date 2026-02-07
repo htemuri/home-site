@@ -20,7 +20,6 @@ export default function SideBar({
     { displayName: "Home", route: "/" },
     { displayName: "Career", route: "/career" },
     { displayName: "Projects", route: "/projects" },
-    { displayName: "Cat", route: "/cat" },
     { displayName: "Contact Me", route: "/contact-me" },
   ];
   return (
