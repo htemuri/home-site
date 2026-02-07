@@ -33,7 +33,7 @@ Thanks for visiting!
       <CodeBlock
         code={introductionCode}
         lang="ansi"
-        duration={5000}
+        duration={3000}
         writing={true}
         onDone={() => {
           setTimeout(() => setShowWhoami(true), 200);
