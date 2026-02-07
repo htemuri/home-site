@@ -11,7 +11,6 @@ export default function Home() {
 [1;32mConnected.[0m
 
 [1m[1;32m$[0m whoami[0m
-
 `;
   const whoami = `Hi, I’m [1;36mHarris[0m![0m
 
