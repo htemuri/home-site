@@ -38,8 +38,8 @@ type Particle = {
 function GravityStarsBackground({
   starsCount = 75,
   starsSize = 2,
-  starsOpacity = 0.85,
-  glowIntensity = 35,
+  starsOpacity = 0.75,
+  glowIntensity = 15,
   glowAnimation = "ease",
   movementSpeed = 0.3,
   mouseInfluence = 100,
